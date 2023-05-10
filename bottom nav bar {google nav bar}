@@ -1,0 +1,36 @@
+class navbar extends State<navbar> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      bottomNavigationBar: Container(
+        color: Color.fromARGB(255, 14, 12, 12),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 16),
+          child: GNav(
+              tabBorderRadius: 15,
+              gap: 8,
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              color: Colors.white,
+              activeColor: Colors.white,
+              tabBackgroundColor: Colors.grey.shade900,
+              padding: EdgeInsets.all(16),
+              tabs: [
+                GButton(
+                  icon: Icons.home,
+                  text: 'home',
+                ),
+                GButton(
+                  icon: Icons.location_pin,
+                  text: 'location',
+                ),
+                GButton(
+                  icon: Icons.shopping_cart,
+                  text: 'cart',
+                ),
+                GButton(
+                  icon: Icons.person,
+                  text: 'profile',
+                ),
+              ]),
+        ),
+      ),
